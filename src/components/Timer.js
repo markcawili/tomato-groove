@@ -6,6 +6,7 @@ export default function Timer() {
     const [minutes, setMinutes] = useState(0);
     const [seconds, setSeconds] = useState(5);
     const [displayMessage, setDisplayMessage] = useState(false);
+    const [isActive, setIsActive] = React.useState(false);
 
     const timerMinutes = minutes < 10 ? `0${minutes}` : minutes;
     const timerSeconds = seconds < 10 ? `0${seconds}` : seconds;
@@ -15,32 +16,36 @@ export default function Timer() {
         let interval = setInterval(() => {
             clearInterval(interval);
 
-            if (seconds === 0) {
-                if (minutes !== 0) {
-                    setSeconds(59);
-                    setMinutes(minutes - 1);
+            if (isActive) {
+                if (seconds === 0) {
+                    if (minutes !== 0) {
+                        setSeconds(59);
+                        setMinutes(minutes - 1);
+                    } else {
+                        /*end of timer: start break timer or new timer*/
+
+                        /*pop up comes here*/
+                        /*alternates*/
+                        let minutes = displayMessage ? 24 : 5;
+                        let seconds = 0;
+
+                        setMinutes(minutes);
+                        setSeconds(seconds);
+                        setDisplayMessage(!displayMessage);
+                        setIsActive(false);
+                    }
                 } else {
-                    /*end of timer: start break timer or new timer*/
-
-                    /*pop up comes here*/
-                    /*alternates*/
-                    let minutes = displayMessage ? 24 : 4;
-                    let seconds = 59;
-
-                    setMinutes(minutes);
-                    setSeconds(seconds);
-                    setDisplayMessage(!displayMessage);
+                    setSeconds(seconds - 1);
                 }
-            } else {
-                setSeconds(seconds - 1);
             }
 
         }, 1000)
-    }, [seconds])
+    }, [seconds, isActive])
 
     return (
         <div className="pomodoro">
             <div className="timer">{timerMinutes}:{timerSeconds}</div>
+            <button onClick={() => setIsActive(true)}>Start</button>
         </div>
     )
 }
