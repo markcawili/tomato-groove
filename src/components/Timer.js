@@ -23,6 +23,7 @@ export default function Timer() {
                     /*end of timer: start break timer or new timer*/
 
                     /*pop up comes here*/
+                    /*alternates*/
                     let minutes = displayMessage ? 24 : 4;
                     let seconds = 59;
 
