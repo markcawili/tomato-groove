@@ -52,6 +52,9 @@ body {
 	color: #333333;
 	height: 100vh;
 	font-family: "Roboto Light", monospace;
+
+	/*This took out the scrolling*/
+	overflow: hidden;
 }
 
 /*This is the HTML element*/
