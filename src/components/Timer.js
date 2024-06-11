@@ -9,6 +9,7 @@ export default function Timer() {
     const [displayMessage, setDisplayMessage] = useState(false);
     const [isActive, setIsActive] = React.useState(false);
     const [showModal, setShowModal] = React.useState(false);
+    const [isBreak, setIsBreak] = React.useState(false);
 
     const timerMinutes = minutes < 10 ? `0${minutes}` : minutes;
     const timerSeconds = seconds < 10 ? `0${seconds}` : seconds;
@@ -24,18 +25,16 @@ export default function Timer() {
                         setSeconds(59);
                         setMinutes(minutes - 1);
                     } else {
-                        /*end of timer: start break timer or new session timer*/
-
                         let minutes = displayMessage ? 24 : 5;
                         let seconds = 0;
-
-                        /*pop up only shows at timer end*/
-                        setShowModal(true);
 
                         setMinutes(minutes);
                         setSeconds(seconds);
                         setDisplayMessage(!displayMessage);
                         setIsActive(false);
+                        setIsBreak(!isBreak);
+
+                        setShowModal(true);
                     }
                 } else {
                     setSeconds(seconds - 1);
@@ -55,7 +54,8 @@ export default function Timer() {
             <button onClick={() => setIsActive(true)}>Start</button>
 
             {/*Modal is set here and is only opened based on the variables, the function toggleModal is passed along*/}
-            <Modal isOpen={showModal} toggleModal={toggleModal}/>
+            <Modal isOpen={showModal} toggleModal={toggleModal} isBreak={isBreak}/>
         </div>
     )
+
 }
