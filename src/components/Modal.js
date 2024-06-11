@@ -18,7 +18,7 @@ export default function Modal({isOpen, toggleModal, isBreak}) {
                     <div className="modal-content">
                         <h2>TEST</h2>
                         <p>{message}</p>
-                        <button className="close-modal" onClick={toggleModal}>CLOSE</button>
+                        <button className="close-modal-btn" onClick={toggleModal}>CLOSE</button>
                     </div>
                 </div>
             </div>
