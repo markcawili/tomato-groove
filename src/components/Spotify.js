@@ -1,5 +1,6 @@
 import React from 'react';
 import {useEffect, useState} from "react";
+import axios from "axios";
 
 export default function Spotify() {
     const CLIENT_ID = "4086684ccd334080b7243a8eba2b507c";
@@ -7,7 +8,7 @@ export default function Spotify() {
     const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
     const RESPONSE_TYPE = "token";
 
-    const [token, setToken] = useState("")
+    const [token, setToken] = useState("");
 
     useEffect(() => {
         /*From url*/
@@ -22,13 +23,27 @@ export default function Spotify() {
             /*sets the token*/
             window.location.hash = "";
             window.localStorage.setItem("token", token);
-            setToken(token);
         }
+
+        setToken(token);
     }, []);
 
+    const logout = () => {
+        setToken("");
+        window.localStorage.removeItem("token");
+    }
+
     return (
-        <button>
+        <div className="spotify">
+            {!token ?
             <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>Log In to Spotify!</a>
-        </button>
+            : <button onClick={logout}>Log Out</button>
+            }
+
+            {token ?
+                <div></div>
+                : <h2>Please login</h2>
+            }
+        </div>
     )
 }
