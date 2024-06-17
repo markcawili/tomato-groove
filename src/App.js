@@ -1,6 +1,6 @@
 import Timer from "./components/Timer";
 import List from "./components/List";
-import Spotify from "./components/Spotify";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
           <Timer />
           <div className="utility">
               <List />
-              <Spotify />
+              <Login />
           </div>
       </div>
   );

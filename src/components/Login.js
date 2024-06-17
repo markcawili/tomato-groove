@@ -1,8 +1,10 @@
 import React from 'react';
 import {useEffect, useState} from "react";
 import axios from "axios";
+import logo from "../resources/spotify.svg"
+import '../styles/Login.css';
 
-export default function Spotify() {
+export default function Login() {
     const CLIENT_ID = "4086684ccd334080b7243a8eba2b507c";
     const REDIRECT_URI = "http://localhost:3000/";
     const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
@@ -47,18 +49,23 @@ export default function Spotify() {
     }
 
     return (
-        <div className="spotify">
-            {!token ?
-            <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPE}&show_dialog=${SHOW_DIALOG}`}>Log In to Spotify!</a>
-            : <button onClick={logout}>Log Out</button>
-            }
+        <div className="login">
 
-            {token ?
-                <div>
-                    <button onClick={getSavedSongs}>Liked Songs</button>
-                </div>
-                : <h2>Please login</h2>
-            }
+            <img src={logo} alt=""/>
+            <a>LOGIN WITH SPOTIFY</a>
+
+            {/*{!token ?*/}
+            {/*<a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPE}&show_dialog=${SHOW_DIALOG}`}>Log In to Spotify!</a>*/}
+            {/*: <button onClick={logout}>Log Out</button>*/}
+            {/*}*/}
+
+            {/*{token ?*/}
+            {/*    <div>*/}
+            {/*        <button onClick={getSavedSongs}>Liked Songs</button>*/}
+            {/*    </div>*/}
+            {/*    : <h2>Please login</h2>*/}
+            {/*}*/}
+
         </div>
     )
 }
