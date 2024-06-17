@@ -35,7 +35,7 @@ export default function ToDoList() {
                 {/*Every To-Do is mapped as a list*/}
                 {todos.map((todo) => (
                     <div className="list">
-                        <button type="checkbox"></button>
+                        <input type="checkbox"></input>
                         <li key={todo}>{todo}</li>
                     </div>
                 ))}
