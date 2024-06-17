@@ -71,6 +71,7 @@ body {
 	align-items: flex-start;
 	margin-left: 2em;
 	margin-top: 2em;
+	margin-right: 2em;
 }
 
 /*Adding a night mode symbol might need the tomato groove h1 to be its own div and then add the h1 and icon div within that to flex it*/
@@ -86,4 +87,16 @@ h1 {
 
 .start-btn {
 	margin-left: 2em;
+}
+
+.spotify {
+	border: 1px solid red;
+}
+
+.utility {
+	display: flex;
+	width: 100%;
+	border: 1px solid blue;
+	justify-content: space-between;
+	margin-top: 1em;
 }

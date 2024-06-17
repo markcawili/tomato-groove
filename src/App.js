@@ -7,8 +7,10 @@ function App() {
       <div className="App">
           <h1>Tomato Groove</h1>
           <Timer />
-          <List />
-          <Spotify />
+          <div className="utility">
+              <List />
+              <Spotify />
+          </div>
       </div>
   );
 }

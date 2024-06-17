@@ -7,7 +7,10 @@ export default function Spotify() {
     const REDIRECT_URI = "http://localhost:3000/";
     const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
     const RESPONSE_TYPE = "token";
-    const SCOPE = 'user-library-read'
+    const SCOPE = 'user-library-read';
+
+    /*Can remove this to stop it from asking to log in every time*/
+    const SHOW_DIALOG = "True";
 
     const [token, setToken] = useState("");
 
@@ -34,7 +37,7 @@ export default function Spotify() {
         window.localStorage.removeItem("token");
     }
 
-    const getSavedSongs = async (e) => {
+    const getSavedSongs = async () => {
         const {data} = await axios.get("https://api.spotify.com/v1/me/tracks?limit=10", {
             headers: {
                 Authorization: `Bearer ${token}`
@@ -46,7 +49,7 @@ export default function Spotify() {
     return (
         <div className="spotify">
             {!token ?
-            <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPE}`}>Log In to Spotify!</a>
+            <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPE}&show_dialog=${SHOW_DIALOG}`}>Log In to Spotify!</a>
             : <button onClick={logout}>Log Out</button>
             }
 
