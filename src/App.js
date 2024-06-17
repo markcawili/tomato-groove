@@ -1,16 +1,20 @@
 import Timer from "./components/Timer";
 import List from "./components/List";
 import Login from "./components/Login";
+import Player from "./components/Player";
 import React, {useEffect, useState} from "react";
 import {getTokenFromUrl} from "./spotify";
 import SpotifyWebApi from "spotify-web-api-js";
+import {useDataLayerValue} from "./components/DataLayer"
+
+//Will be master object for our interactions with our project and the API
+const spotify = new SpotifyWebApi();
 
 function App() {
 
-    //Will be master object for our interactions with our project and the API
-    const spotify = new SpotifyWebApi();
-
     const [token, setToken] = useState(null);
+    //We can grab whatever we want from the data layer from here! What we want is destructured already, no object returned
+    const [{user}, dispatch] = useDataLayerValue();
 
     useEffect(() => {
         const hash = getTokenFromUrl();
@@ -27,12 +31,19 @@ function App() {
             //Gets the user account and returns a Promise
             //If everything goes well, returns a user
             spotify.getMe().then(user => {
-                console.log('I have a user', user);
+                dispatch({
+                    type: 'SET_USER',
+                    user: user,
+                })
             });
         }
 
         console.log("I have a token", token);
     }, []);
+
+
+    console.log('I have a user', user);
+
 
     return (
         <div className="App">
@@ -40,7 +51,7 @@ function App() {
             <Timer />
             <div className="utility">
                 <List />
-                {token ? (<h1>Logged in</h1>) : (<Login />)}
+                {token ? (<Player />) : (<Login />)}
             </div>
         </div>
     );
