@@ -68,21 +68,31 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	align-items: flex-start;
 	margin-left: 2em;
 	margin-top: 2em;
 	margin-right: 2em;
+	align-items: center;
 }
 
 /*Adding a night mode symbol might need the tomato groove h1 to be its own div and then add the h1 and icon div within that to flex it*/
 h1 {
-	font-size: 2em;
+	font-size: 3em;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	border: solid 1px purple;
 }
 
 .pomodoro {
 	display: flex;
 	font-size: 5em;
-	margin-top: 1em;
+	align-content: center;
+	border: solid 1px purple;
+	padding-bottom: 1em;
+	padding-top: 1em;
 }
 
 .start-btn {
@@ -92,8 +102,10 @@ h1 {
 .utility {
 	display: flex;
 	width: 100%;
-	/*height: 100%;*/
-	border: 1px solid blue;
+	height: 100%;
 	justify-content: space-between;
-	margin-top: 1em;
+	border: 1px solid blue;
+
+	/*HMMMM*/
+	margin-bottom: 6em;
 }

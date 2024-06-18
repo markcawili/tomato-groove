@@ -44,7 +44,10 @@ function App() {
 
     return (
         <div className="App">
-            <h1>Tomato Groove</h1>
+            <div className="header">
+                <h1>Tomato Groove</h1>
+                <button>Dark mode</button>
+            </div>
             <Timer />
             <div className="utility">
                 <List />
