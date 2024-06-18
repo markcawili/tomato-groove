@@ -12,9 +12,8 @@ const spotify = new SpotifyWebApi();
 
 function App() {
 
-    const [token, setToken] = useState(null);
     //We can grab whatever we want from the data layer from here! What we want is destructured already, no object returned
-    const [{user}, dispatch] = useDataLayerValue();
+    const [{user, token}, dispatch] = useDataLayerValue();
 
     useEffect(() => {
         const hash = getTokenFromUrl();
@@ -25,25 +24,23 @@ function App() {
 
         //Use of the _ as a standard to refer to the temporary variable
         if (_token) {
-            setToken(_token);
+
+            dispatch({
+                type: "SET_TOKEN",
+                token: _token,
+            })
 
             spotify.setAccessToken(_token);
             //Gets the user account and returns a Promise
             //If everything goes well, returns a user
-            spotify.getMe().then(user => {
+            spotify.getMe().then((user) => {
                 dispatch({
                     type: 'SET_USER',
                     user: user,
                 })
             });
         }
-
-        console.log("I have a token", token);
     }, []);
-
-
-    console.log('I have a user', user);
-
 
     return (
         <div className="App">
@@ -51,7 +48,7 @@ function App() {
             <Timer />
             <div className="utility">
                 <List />
-                {token ? (<Player />) : (<Login />)}
+                {token ? (<Player spotify={spotify} />) : (<Login />)}
             </div>
         </div>
     );
