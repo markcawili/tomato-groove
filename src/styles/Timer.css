@@ -1,0 +1,12 @@
+.pomodoro {
+	display: flex;
+	font-size: 5em;
+	justify-content: center;
+	align-items: center;
+
+	border: solid 1px purple;
+}
+
+.start-btn {
+	margin-left: 2rem;
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import {useState, useEffect} from "react";
 import Modal from "./Modal";
 import sound from '../resources/timer.wav'
-import index from '../styles/index.css'
+import '../styles/Timer.css'
 
 export default function Timer() {
 

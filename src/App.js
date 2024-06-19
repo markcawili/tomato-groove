@@ -2,10 +2,11 @@ import Timer from "./components/Timer";
 import List from "./components/List";
 import Login from "./components/Login";
 import Player from "./components/Player";
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import {getTokenFromUrl} from "./spotify";
 import SpotifyWebApi from "spotify-web-api-js";
 import {useDataLayerValue} from "./components/DataLayer"
+import Footer from "./components/Footer";
 
 //Will be master object for our interactions with our project and the API
 const spotify = new SpotifyWebApi();
@@ -53,6 +54,8 @@ function App() {
                 <List />
                 {token ? (<Player spotify={spotify} />) : (<Login />)}
             </div>
+
+            {token ? (<Footer />) : <div className="footer"><h2>I am the Footer</h2></div>}
         </div>
     );
 }

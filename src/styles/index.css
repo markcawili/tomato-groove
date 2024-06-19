@@ -49,63 +49,43 @@ table {
 
 /*-------------------------------------------------*/
 
-body {
-	background-color: #FAFAFA;
-	color: #333333;
-	height: 100vh;
-	font-family: "Roboto Light", monospace;
-
-	/*This took out the scrolling*/
-	overflow: hidden;
-}
-
-/*This is the HTML element*/
-#root {
+html, body {
 	height: 100%;
 }
 
 .App {
+	height: 100dvh;
 	display: flex;
 	flex-direction: column;
-	height: 100%;
-	margin-left: 2em;
-	margin-top: 2em;
-	margin-right: 2em;
-	align-items: center;
+}
+
+body {
+	background-color: #FAFAFA;
+	color: #333333;
+	font-family: "Roboto Light", monospace;
 }
 
 /*Adding a night mode symbol might need the tomato groove h1 to be its own div and then add the h1 and icon div within that to flex it*/
 h1 {
-	font-size: 3em;
+	font-size: 3rem;
 }
 
 .header {
 	display: flex;
 	justify-content: space-between;
-	width: 100%;
-	border: solid 1px purple;
-}
-
-.pomodoro {
-	display: flex;
-	font-size: 5em;
-	align-content: center;
-	border: solid 1px purple;
-	padding-bottom: 1em;
-	padding-top: 1em;
-}
-
-.start-btn {
-	margin-left: 2em;
+	height: 65px;
+	padding: 0.5rem;
+	position: relative;
+	top: 0;
 }
 
 .utility {
 	display: flex;
-	width: 100%;
-	height: 100%;
+	flex-grow: 1;
 	justify-content: space-between;
-	border: 1px solid blue;
+	padding: 0.5rem;
 
-	/*HMMMM*/
-	margin-bottom: 6em;
+	border: solid 1px purple;
 }
+
+/*MAYBE JUST HAVE TO SET SIZES FOR EACH DIV OF THE APP*/

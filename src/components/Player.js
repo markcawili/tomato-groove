@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/Player.css"
 import Body from "../components/Body";
-import Footer from "../components/Footer";
 
 function Player({spotify}) {
 
@@ -10,8 +9,6 @@ function Player({spotify}) {
             <div className="player_body">
                 <Body />
             </div>
-
-            <Footer />
         </div>
     );
 }
