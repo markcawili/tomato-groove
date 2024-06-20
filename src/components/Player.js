@@ -6,9 +6,7 @@ function Player({spotify}) {
 
     return (
         <div className="player">
-            <div className="player_body">
-                <Body />
-            </div>
+            <Body />
         </div>
     );
 }

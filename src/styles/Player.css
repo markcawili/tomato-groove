@@ -1,4 +1,6 @@
 .player {
+    min-width: 230px;
     width: 25%;
+
     border: solid 1px red;
 }
