@@ -3,7 +3,6 @@
     padding: 20px;
     position: relative;
     bottom: 0;
-    border: solid 1px red;
     display: flex;
     justify-content: space-between;
     background-color: #333333;
@@ -22,8 +21,43 @@
 
 .footer-left {
     flex: 0.3;
+    display: flex;
+    align-items: center;
+    color: white;
+    width: 300px;
 }
 
 .footer-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex: 0.3;
+    color: white;
+}
+
+.footer-albumLogo {
+    height: 60px;
+    width: 60px;
+    margin: 20px;
+    object-fit: contain;
+    border-radius: 15%;
+}
+
+.footer-green {
+
+}
+
+.footer-songInfo > h4 {
+    margin-bottom: 5px;
+}
+
+.footer-songInfo > p {
+    font-size: 12px;
+}
+
+.footer-icon:hover,
+.footer-green:hover {
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.2) !important;
+    cursor: pointer;
 }
