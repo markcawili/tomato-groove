@@ -1,7 +1,29 @@
 .footer {
     height: 65px;
-    padding: 0.5rem;
+    padding: 20px;
     position: relative;
     bottom: 0;
     border: solid 1px red;
+    display: flex;
+    justify-content: space-between;
+    background-color: #333333;
+}
+
+.footer-center {
+    flex: 0.4;
+    padding: 0 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*Justify space between but with max width 300px*/
+    max-width: 300px
+}
+
+.footer-left {
+    flex: 0.3;
+}
+
+.footer-right {
+    flex: 0.3;
 }

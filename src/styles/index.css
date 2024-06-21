@@ -88,3 +88,8 @@ h1 {
 
 	border: solid 1px purple;
 }
+
+/*Allows scroll bars to be hidden but functional*/
+body::-webkit-scrollbar {
+	display: none;
+}
