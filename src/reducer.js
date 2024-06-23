@@ -5,6 +5,7 @@ export const initialState = {
     playlists: [],
     playing: false,
     item: null,
+    likedSongs: [],
 };
 
 const reducer = (state, action) => {
@@ -25,6 +26,12 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 token: action.token
+            };
+
+        case 'SET_LIKED_SONGs':
+            return {
+                ...state,
+                likedSongs: action.likedSongs
             };
         default:
             return state;

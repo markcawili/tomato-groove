@@ -38,8 +38,15 @@ function App() {
                 dispatch({
                     type: 'SET_USER',
                     user: user,
-                })
+                });
             });
+
+            spotify.getMySavedTracks(token).then(response =>
+                dispatch({
+                    type: "SET_LIKED_SONGS",
+                    likedSongs: response,
+                })
+            );
         }
     }, []);
 
