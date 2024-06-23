@@ -5,13 +5,13 @@
     bottom: 0;
     display: flex;
     justify-content: space-between;
-    background-color: #333333;
+    background-color: #2a231f;
 }
 
 .footer-center {
     flex: 0.4;
     padding: 0 100px;
-    color: white;
+    color: #ecefee;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,7 +23,7 @@
     flex: 0.3;
     display: flex;
     align-items: center;
-    color: white;
+    color: #ecefee;
     width: 300px;
 }
 
@@ -32,7 +32,7 @@
     justify-content: space-between;
     align-items: center;
     flex: 0.3;
-    color: white;
+    color: #ecefee;
 }
 
 .footer-albumLogo {
@@ -60,4 +60,10 @@
     transition: transform 0.2s ease-in-out;
     transform: scale(1.2) !important;
     cursor: pointer;
+    color: #cd2200;
 }
+
+#root > div > div.footer > div.footer-right > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-true.css-1vd824g-MuiGrid-root > span {
+    color: #cd2200;
+}
+

@@ -3,8 +3,9 @@
 	font-size: 5em;
 	justify-content: center;
 	align-items: center;
+	color: #cd2200;
 
-	border: solid 1px purple;
+	/*border: solid 1px purple;*/
 }
 
 .start-btn {
