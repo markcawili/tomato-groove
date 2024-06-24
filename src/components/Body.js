@@ -11,12 +11,13 @@ function Body({spotify}) {
 
     return (
         <div className="body">
+            {/*Do we even want to add this?*/}
             <h1>Liked songs</h1>
-            <div className="song">
-                {likedSongs.items?.map((item) => (
-                    <SongRow spotify={spotify} track={item.track} />
-                ))}
-            </div>
+            {/*<div className="song">*/}
+            {/*    {likedSongs.items?.map((item) => (*/}
+            {/*        <SongRow spotify={spotify} track={item.track} />*/}
+            {/*    ))}*/}
+            {/*</div>*/}
         </div>
     )
 }

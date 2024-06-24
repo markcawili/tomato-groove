@@ -20,3 +20,7 @@
 .song > :first-child {
     margin-top: 10px;
 }
+
+.body > h1 {
+    font-size: 35px;
+}

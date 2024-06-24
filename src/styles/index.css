@@ -60,14 +60,14 @@ html, body {
 }
 
 body {
-	background-color: #FAFAFA;
-	color: #2a231f;
+	background-color: #ecefee;
 	font-family: "Roboto Light", monospace;
 }
 
 /*Adding a night mode symbol might need the tomato groove h1 to be its own div and then add the h1 and icon div within that to flex it*/
 h1 {
 	font-size: 3rem;
+	color: #2a231f;
 }
 
 .header {

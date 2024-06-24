@@ -55,7 +55,7 @@ function App() {
         <div className="App">
             <div className="header">
                 <h1>Tomato Groove</h1>
-                <button>Dark mode</button>
+                {/*<button>Dark mode</button>*/}
             </div>
             <Timer />
             <div className="utility">
@@ -63,7 +63,7 @@ function App() {
                 {token ? (<Player spotify={spotify} />) : (<Login />)}
             </div>
 
-            {token ? (<Footer />) : <div className="footer">></div>}
+            {token ? (<Footer />) : null}
         </div>
     );
 }

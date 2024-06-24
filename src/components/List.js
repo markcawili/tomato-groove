@@ -4,7 +4,7 @@ import '../styles/List.css'
 
 export default function ToDoList() {
 
-    const [todos, setTodos] = useState(["test"]);
+    const [todos, setTodos] = useState([]);
     const [inputVal, setInputVal] = useState('');
 
     const handleInputChange = (e) => {
@@ -34,10 +34,10 @@ export default function ToDoList() {
             <ul>
                 {/*Every To-Do is mapped as a list*/}
                 {todos.map((todo) => (
-                    <div className="list">
+                    <label className="list">
                         <input type="checkbox"></input>
-                        <li key={todo}>{todo}</li>
-                    </div>
+                        <li className="strike" key={todo}>{todo}</li>
+                    </label>
                 ))}
             </ul>
         </div>
