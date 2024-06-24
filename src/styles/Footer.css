@@ -3,67 +3,62 @@
     padding: 20px;
     position: relative;
     bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    background-color: #2a231f;
 }
 
-.footer-center {
-    flex: 0.4;
-    padding: 0 100px;
-    color: #ecefee;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /*Justify space between but with max width 300px*/
-    max-width: 300px
-}
-
-.footer-left {
-    flex: 0.3;
-    display: flex;
-    align-items: center;
-    color: #ecefee;
-    width: 300px;
-}
-
-.footer-right {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 0.3;
-    color: #ecefee;
-}
-
-.footer-albumLogo {
-    height: 60px;
-    width: 60px;
-    margin: 20px;
-    object-fit: contain;
-    border-radius: 15%;
-}
-
-.footer-green {
-
-}
-
-.footer-songInfo > h4 {
-    margin-bottom: 5px;
-}
-
-.footer-songInfo > p {
-    font-size: 12px;
-}
-
-.footer-icon:hover,
-.footer-green:hover {
+#root > div > div.footerOne > div > div > div._ControlsRSWP.__11aa6ep > div._ControlsButtonsRSWP.__niud9e > div > button:hover
+{
     transition: transform 0.2s ease-in-out;
     transform: scale(1.2) !important;
     cursor: pointer;
     color: #cd2200;
 }
 
-#root > div > div.footer > div.footer-right > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-true.css-1vd824g-MuiGrid-root > span {
+#root > div > div.footerOne > div > div > div.rswp__active._InfoRSWP.__14lm7y9 > div > div > button {
     color: #cd2200;
 }
+
+/*.footer-center {*/
+/*    flex: 0.4;*/
+/*    padding: 0 100px;*/
+/*    color: #ecefee;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: space-between;*/
+/*    !*Justify space between but with max width 300px*!*/
+/*    max-width: 300px*/
+/*}*/
+
+/*.footer-left {*/
+/*    flex: 0.3;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    color: #ecefee;*/
+/*    width: 300px;*/
+/*}*/
+
+/*.footer-right {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    flex: 0.3;*/
+/*    color: #ecefee;*/
+/*}*/
+
+/*.footer-albumLogo {*/
+/*    height: 60px;*/
+/*    width: 60px;*/
+/*    margin: 20px;*/
+/*    object-fit: contain;*/
+/*    border-radius: 15%;*/
+/*}*/
+
+/*.footer-songInfo > h4 {*/
+/*    margin-bottom: 5px;*/
+/*}*/
+
+/*.footer-songInfo > p {*/
+/*    font-size: 12px;*/
+/*}*/
+
+
 

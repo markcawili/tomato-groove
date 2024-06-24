@@ -7,6 +7,7 @@ export const initialState = {
     item: null,
     likedSongs: [],
     currentTrack: null,
+    trackUri: [],
 };
 
 const reducer = (state, action) => {

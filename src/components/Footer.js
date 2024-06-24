@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import '../styles/Footer.css';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
@@ -9,46 +9,70 @@ import {Grid, Slider} from "@mui/material";
 import PlaylistPlayIcon from '@mui/icons-material/PlaylistPlay';
 import VolumeDownIcon from '@mui/icons-material/VolumeDown';
 import {useDataLayerValue} from "./DataLayer";
+import SpotifyPlayer from "react-spotify-web-playback"
 
 function Footer() {
 
-    const [{currentTrack}] = useDataLayerValue();
+    const [{currentTrack, token, trackUri}] = useDataLayerValue();
 
-    /*CURRENT ISSUE IS THAT WHEN THE SONG CHANGES IT IS NOT UPDATED*/
     console.log(currentTrack);
 
+    if (!token) return null;
+
     return (
-        <div className="footer">
-            <div className="footer-left">
-                {/*<img src={currentTrack.item.album.images[0].url}*/}
-                {/*     alt="" className="footer-albumLogo"/>*/}
-                <div className="footer-songInfo">
-                    {/*<h4>{currentTrack.item.name}</h4>*/}
-                    {/*<p>{currentTrack.item.artists.map((artist) => artist.name).join(", ")}</p>*/}
-                </div>
-            </div>
+        <div className="footerOne">
 
-            <div className="footer-center">
-                <ShuffleIcon className="footer-green"></ShuffleIcon>
-                <SkipPreviousIcon className="footer-icon"></SkipPreviousIcon>
-                <PlayCircleOutlineIcon fontSize="large" className="footer-icon"></PlayCircleOutlineIcon>
-                <SkipNextIcon className="footer-icon"></SkipNextIcon>
-                <RepeatIcon className="footer-green"></RepeatIcon>
-            </div>
+            {/*TRACK URI would be the song we select, there is an actual URI in the JSON pathfile
+             So perhaps when we select a song we would want to update that! !!! */}
+            <SpotifyPlayer className="footer"
+                token={token}
+                showSaveIcon
+                uris={trackUri ? [trackUri] : []}
+                hideAttribution
+                layout={'responsive'}
+                initialVolume={0.5}
+                styles={{
+                    bgColor: "#2a231f",
+                    color: "#ecefee",
+                    trackNameColor: "#ecefee",
+                    sliderColor: "#cd2200",
+                    sliderTrackColor: "#ecefee",
+                    sliderHandleColor: "#cd2200",
+                    trackArtistColor: "#ecefee",
+                }}
+            />
 
-            <div className="footer-right">
-                <Grid container spacing={2}>
-                    <Grid item>
-                        <PlaylistPlayIcon />
-                    </Grid>
-                    <Grid item>
-                        <VolumeDownIcon />
-                    </Grid>
-                    <Grid item xs>
-                        <Slider />
-                    </Grid>
-                </Grid>
-            </div>
+            {/*ORIGINAL IMPLEMENTATION*/}
+            {/*<div className="footer-left">*/}
+            {/*    /!*<img src={currentTrack.item.album.images[0].url}*!/*/}
+            {/*    /!*     alt="" className="footer-albumLogo"/>*!/*/}
+            {/*    <div className="footer-songInfo">*/}
+            {/*        /!*<h4>{currentTrack.item.name}</h4>*!/*/}
+            {/*        /!*<p>{currentTrack.item.artists.map((artist) => artist.name).join(", ")}</p>*!/*/}
+            {/*    </div>*/}
+            {/*</div>*/}
+
+            {/*<div className="footer-center">*/}
+            {/*    <ShuffleIcon className="footer-green"></ShuffleIcon>*/}
+            {/*    <SkipPreviousIcon className="footer-icon"></SkipPreviousIcon>*/}
+            {/*    <PlayCircleOutlineIcon fontSize="large" className="footer-icon"></PlayCircleOutlineIcon>*/}
+            {/*    <SkipNextIcon className="footer-icon"></SkipNextIcon>*/}
+            {/*    <RepeatIcon className="footer-green"></RepeatIcon>*/}
+            {/*</div>*/}
+
+            {/*<div className="footer-right">*/}
+            {/*    <Grid container spacing={2}>*/}
+            {/*        <Grid item>*/}
+            {/*            <PlaylistPlayIcon />*/}
+            {/*        </Grid>*/}
+            {/*        <Grid item>*/}
+            {/*            <VolumeDownIcon />*/}
+            {/*        </Grid>*/}
+            {/*        <Grid item xs>*/}
+            {/*            <Slider />*/}
+            {/*        </Grid>*/}
+            {/*    </Grid>*/}
+            {/*</div>*/}
         </div>
     )
 }

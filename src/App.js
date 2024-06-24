@@ -14,7 +14,7 @@ const spotify = new SpotifyWebApi();
 function App() {
 
     //We can grab whatever we want from the data layer from here! What we want is destructured already, no object returned
-    const [{token, currentTrack}, dispatch] = useDataLayerValue();
+    const [{token}, dispatch] = useDataLayerValue();
 
     useEffect(() => {
         const hash = getTokenFromUrl();
