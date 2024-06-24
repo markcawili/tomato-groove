@@ -1,8 +1,13 @@
 .body {
     box-sizing: border-box;
-    background: linear-gradient(transparent, #767778, #2a231f);
-    height: 100%;
+    background: linear-gradient(transparent, rgb(91, 87, 115), #2a231f);
     padding: 30px;
-    color: #2a231f
-;
+    color: #2a231f;
+    height: 100%;
+    overflow: auto;
+}
+
+.song {
+    height: 100vh;
+    overflow: auto;
 }

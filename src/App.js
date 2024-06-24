@@ -41,7 +41,7 @@ function App() {
                 });
             });
 
-            spotify.getMySavedTracks(token).then(response =>
+            spotify.getMySavedTracks(_token).then(response =>
                 dispatch({
                     type: "SET_LIKED_SONGS",
                     likedSongs: response,

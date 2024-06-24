@@ -28,7 +28,7 @@ const reducer = (state, action) => {
                 token: action.token
             };
 
-        case 'SET_LIKED_SONGs':
+        case 'SET_LIKED_SONGS':
             return {
                 ...state,
                 likedSongs: action.likedSongs
