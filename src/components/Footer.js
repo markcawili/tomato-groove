@@ -14,19 +14,27 @@ import SpotifyPlayer from "react-spotify-web-playback"
 function Footer() {
 
     const [{token, trackUri}] = useDataLayerValue();
+    const [play, setPlay] = useState(false);
+
+    useEffect(() => setPlay(true), [trackUri]);
+
+    /*CHECK THE URI*/
+    console.log(trackUri)
 
     if (!token) return null;
 
     return (
         <div className="footerOne">
 
-            {/*TRACK URI would be the song we select, there is an actual URI in the JSON pathfile
-             So perhaps when we select a song we would want to update that! !!! */}
             <SpotifyPlayer className="footer"
                 token={token}
                 showSaveIcon
-                uris={trackUri}
-                // uris={trackUri ? [trackUri] : []}
+                // uris={trackUri}
+                uris={trackUri ? [trackUri] : []}
+                play={play}
+                callback={state => {
+                    if (!state.isPlaying) setPlay(false);
+                }}
                 hideAttribution
                 layout={'responsive'}
                 initialVolume={0.5}

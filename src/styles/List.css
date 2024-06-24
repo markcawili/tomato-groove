@@ -3,6 +3,7 @@
     min-width: 230px;
 
     border: solid 1px red;
+    border-radius: 8px;
 }
 
 .list {

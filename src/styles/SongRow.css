@@ -1,6 +1,6 @@
 .songRow {
-    margin-left: 20px;
-    padding: 20px;
+    /*margin-left: 20px;*/
+    padding: 15px;
     display: flex;
     align-items: center;
     color: white;
@@ -10,6 +10,7 @@
     cursor: pointer;
     background-color: #cd2200;
     opacity: 0.8;
+    border-radius: 8px;
 }
 
 .songRow-info {

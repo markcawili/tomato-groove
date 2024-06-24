@@ -53,8 +53,7 @@ export default function Timer() {
 
     return (
         <div className="pomodoro">
-            <div className="timer">{timerMinutes}:{timerSeconds}</div>
-            <button className="start-btn" onClick={() => setIsActive(true)}>Start</button>
+            <div className="timer" onClick={() => setIsActive(true)}>{timerMinutes}:{timerSeconds}</div>
 
             {/*Modal is set here and is only opened based on the variables, the function toggleModal is passed along*/}
             <Modal isOpen={showModal} toggleModal={toggleModal} isBreak={isBreak}/>

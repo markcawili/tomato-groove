@@ -7,7 +7,7 @@ function Player({spotify}) {
     /*Maybe can consolidate to just Body.js? Depends on App.js*/
     return (
         <div className="player">
-            <Body />
+            <Body spotify={spotify} />
         </div>
     );
 }

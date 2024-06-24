@@ -3,11 +3,15 @@
 	font-size: 5em;
 	justify-content: center;
 	align-items: center;
-	color: #cd2200;
+	color: #2a231f;
 
 	/*border: solid 1px purple;*/
 }
 
-.start-btn {
-	margin-left: 2rem;
+.timer:hover {
+    cursor: pointer;
+    background-color: rgba(205, 34, 0, 0.8);
+    border-radius: 8px;
 }
+
+
