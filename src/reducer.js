@@ -6,6 +6,7 @@ export const initialState = {
     playing: false,
     item: null,
     likedSongs: [],
+    currentTrack: null,
 };
 
 const reducer = (state, action) => {
@@ -33,6 +34,13 @@ const reducer = (state, action) => {
                 ...state,
                 likedSongs: action.likedSongs
             };
+
+        case 'SET_CURRENT_TRACK':
+            return {
+                ...state,
+                currentTrack: action.currentTrack
+            };
+
         default:
             return state;
     }

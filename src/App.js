@@ -14,7 +14,7 @@ const spotify = new SpotifyWebApi();
 function App() {
 
     //We can grab whatever we want from the data layer from here! What we want is destructured already, no object returned
-    const [{user, token}, dispatch] = useDataLayerValue();
+    const [{token, currentTrack}, dispatch] = useDataLayerValue();
 
     useEffect(() => {
         const hash = getTokenFromUrl();
@@ -47,6 +47,15 @@ function App() {
                     likedSongs: response,
                 })
             );
+
+            spotify.getMyCurrentPlayingTrack(_token).then(response =>
+                dispatch({
+                    type: "SET_CURRENT_TRACK",
+                    currentTrack: response,
+                }),
+
+            );
+
         }
     }, []);
 
