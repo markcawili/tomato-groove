@@ -3,13 +3,14 @@
     padding: 20px;
     position: relative;
     bottom: 0;
+    background-color: #2a231f;
 }
 
-#root > div > div.footerOne > div > div > div._ControlsRSWP.__11aa6ep > div._ControlsButtonsRSWP.__niud9e > div > button:hover
+#root > div > div > div > div > div._ControlsRSWP.__11aa6ep > div._ControlsButtonsRSWP.__niud9e > div > button:hover,
+#root > div > div > div > div > div.rswp__active._InfoRSWP.__14lm7y9 > div > div > button:hover
 {
     transition: transform 0.2s ease-in-out;
     transform: scale(1.2) !important;
-    cursor: pointer;
     color: #cd2200;
 }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../styles/Body.css'
 import {useDataLayerValue} from "./DataLayer";
 import SongRow from "./SongRow";
@@ -6,8 +6,6 @@ import SongRow from "./SongRow";
 function Body({spotify}) {
 
     const [{likedSongs}] = useDataLayerValue();
-
-    console.log(likedSongs);
 
     return (
         <div className="body">

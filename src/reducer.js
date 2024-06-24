@@ -6,11 +6,11 @@ export const initialState = {
     playing: false,
     item: null,
     likedSongs: [],
-    currentTrack: null,
     trackUri: [],
 };
 
 const reducer = (state, action) => {
+
     //We use this for debugging
     console.log(action);
 
@@ -36,10 +36,10 @@ const reducer = (state, action) => {
                 likedSongs: action.likedSongs
             };
 
-        case 'SET_CURRENT_TRACK':
+        case 'SET_TRACK_URI':
             return {
                 ...state,
-                currentTrack: action.currentTrack
+                trackUri: action.trackUri
             };
 
         default:

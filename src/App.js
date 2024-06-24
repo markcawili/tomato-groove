@@ -48,14 +48,6 @@ function App() {
                 })
             );
 
-            spotify.getMyCurrentPlayingTrack(_token).then(response =>
-                dispatch({
-                    type: "SET_CURRENT_TRACK",
-                    currentTrack: response,
-                }),
-
-            );
-
         }
     }, []);
 
@@ -71,7 +63,7 @@ function App() {
                 {token ? (<Player spotify={spotify} />) : (<Login />)}
             </div>
 
-            {token ? (<Footer />) : <div className="footer"><h2>I am the Footer</h2></div>}
+            {token ? (<Footer />) : <div className="footer">></div>}
         </div>
     );
 }

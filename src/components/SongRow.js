@@ -1,9 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "../styles/SongRow.css"
+import {useDataLayerValue} from "./DataLayer";
 
 function SongRow({track}) {
+
+    const [playingTrack, setPlayingTrack] = useState(null);
+    const [{}, dispatch] = useDataLayerValue();
+
+    function handlePlay() {
+        setPlayingTrack(track);
+        dispatch({
+            type: "SET_TRACK_URI",
+            trackUri: playingTrack?.uri,
+        })
+    }
+
+    /*Maybe it is bugging because the position has not been clicked on yet??*/
     return (
-        <div className='songRow'>
+        <div className='songRow' onClick={handlePlay}>
             <img className="songRow-album" src={track.album.images[0].url} alt='' />
                 <div className='songRow-info'>
                     <h2>{track.name}</h2>

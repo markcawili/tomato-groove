@@ -13,9 +13,7 @@ import SpotifyPlayer from "react-spotify-web-playback"
 
 function Footer() {
 
-    const [{currentTrack, token, trackUri}] = useDataLayerValue();
-
-    console.log(currentTrack);
+    const [{token, trackUri}] = useDataLayerValue();
 
     if (!token) return null;
 
@@ -27,7 +25,8 @@ function Footer() {
             <SpotifyPlayer className="footer"
                 token={token}
                 showSaveIcon
-                uris={trackUri ? [trackUri] : []}
+                uris={trackUri}
+                // uris={trackUri ? [trackUri] : []}
                 hideAttribution
                 layout={'responsive'}
                 initialVolume={0.5}
