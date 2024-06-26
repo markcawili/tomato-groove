@@ -19,15 +19,15 @@ function SongRow({track, spotify}) {
 
     /*Maybe it is bugging because the position has not been clicked on yet??*/
     return (
-        <div className='songRow' /*onClick={handlePlay}*/>
+        <div className='songRow' onClick={handlePlay}>
             <img className="songRow-album" src={track.album.images[0].url} alt='' />
-                <div className='songRow-info'>
-                    <h2>{track.name}</h2>
-                    <p>
-                        {/*Joins all artists and then at the last one set a - */}
-                        {track.artists.map((artist) => artist.name).join(", ")} -{" "}
-                        {track.album.name}
-                    </p>
+            <div className='songRow-info'>
+                <h2>{track.name}</h2>
+                <p>
+                    {/*Joins all artists and then at the last one set a - */}
+                    {track.artists.map((artist) => artist.name).join(", ")} -{" "}
+                    {track.album.name}
+                </p>
             </div>
         </div>
     );

@@ -10,8 +10,7 @@ function Body({spotify}) {
     console.log(likedSongs);
 
     return (
-        <div className="body">
-            {/*Do we even want to add this?*/}
+        <div className="utility-body">
             <h1>Liked songs</h1>
             {/*<div className="song">*/}
             {/*    {likedSongs.items?.map((item) => (*/}

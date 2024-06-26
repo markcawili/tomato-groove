@@ -1,11 +1,12 @@
-.body {
+.utility-body {
     box-sizing: border-box;
     background: linear-gradient(transparent, rgb(91, 87, 115), #2a231f);
     padding: 30px;
     color: #2a231f;
     height: 100%;
-    overflow: auto;
     border-radius: 8px;
+    position: relative;
+    overflow: scroll;
 }
 
 ::-webkit-scrollbar {
@@ -13,8 +14,8 @@
 }
 
 .song {
+    /*position: absolute;*/
     height: 100vh;
-    overflow: auto;
 }
 
 .song > :first-child {
