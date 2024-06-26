@@ -1,9 +1,7 @@
 .utility-body {
-    box-sizing: border-box;
     background: linear-gradient(transparent, rgb(91, 87, 115), #2a231f);
     padding: 30px;
     color: #2a231f;
-    height: 100%;
     border-radius: 8px;
     position: relative;
     overflow: scroll;

@@ -24,9 +24,9 @@ function Footer() {
     if (!token) return null;
 
     return (
-        <div className="footerOne">
+        <div className="footer">
 
-            <SpotifyPlayer className="footer"
+            <SpotifyPlayer className="footer-player"
                 token={token}
                 showSaveIcon
                 // uris={trackUri}

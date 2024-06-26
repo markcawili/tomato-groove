@@ -53,47 +53,81 @@ table {
 	box-sizing: border-box;
 }
 
-html, body {
-	height: 100%;
+html, .body, .App {
+	height: 100%
 }
 
-.App {
-	height: 100dvh;
-	display: flex;
-	flex-direction: column;
+.body {
+	display: inline-block;
 }
 
-body {
-	background-color: #ecefee;
+/*The columns inside a row are all floating to the left, and are therefore taken out of the flow of the page, and other
+elements will be placed as if the columns do not exist. To prevent this, we will add a style that clears the flow:*/
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* All these columns should be floating to the left, and have a padding of 15px:*/
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+
+html {
 	font-family: "Roboto Light", monospace;
+	background-color: #ecefee;
 }
 
-/*Adding a night mode symbol might need the tomato groove h1 to be its own div and then add the h1 and icon div within that to flex it*/
 h1 {
 	font-size: 3rem;
 	color: #2a231f;
 }
 
 .header {
-	display: flex;
-	justify-content: space-between;
-	/*Might want to get this so that it is maxed 65px until it starts getting smaller*/
-	height: 65px;
-	padding: 0.5rem;
-	position: relative;
-	top: 0;
+	padding: 15px;
 }
 
-.utility {
-	display: flex;
-	flex-grow: 1;
-	justify-content: space-between;
-	padding: 0.5rem;
+/*Design for mobile first!*/
+/*Instead of changing styles when the width gets smaller than 768px, we should change the design when the width gets
+larger than 768px. This will make our design Mobile First:*/
 
-	/*border: solid 1px purple;*/
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
 }
 
-/*Allows scroll bars to be hidden but functional*/
-body::-webkit-scrollbar {
-	display: none;
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+/*When the screen (browser window) gets smaller than 768px, each column should have a width of 100%:*/
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
 }

@@ -63,13 +63,24 @@ function App() {
                 <h1>Tomato Groove</h1>
                 {/*<button>Dark mode</button>*/}
             </div>
-            <Timer />
-            <div className="utility">
-                <List />
-                {token ? (<Player spotify={spotify} />) : (<Login />)}
+
+            <div className="row">
+
+                <div className="col-3 col-s-3 listDiv">
+                    <List/>
+                </div>
+
+                <div className="col-6 col-s-9 timerDiv">
+                    <Timer/>
+                </div>
+
+                <div className="col-3 col-s-12">
+                    {token ? (<Player spotify={spotify}/>) : (<Login/>)}
+                </div>
+
             </div>
 
-            {token ? (<Footer />) : null}
+            {token ? (<Footer/>) : null}
         </div>
     );
 }

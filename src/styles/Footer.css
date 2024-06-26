@@ -1,8 +1,11 @@
-.footer {
-    height: 65px;
-    padding: 20px;
-    bottom: 0;
+.footer-player {
+    padding: 15px;
     background-color: #2a231f;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
 }
 
 #root > div > div > div > div > div._ControlsRSWP.__11aa6ep > div._ControlsButtonsRSWP.__niud9e > div > button:hover,
@@ -16,49 +19,6 @@
 #root > div > div.footerOne > div > div > div.rswp__active._InfoRSWP.__14lm7y9 > div > div > button {
     color: #cd2200;
 }
-
-/*.footer-center {*/
-/*    flex: 0.4;*/
-/*    padding: 0 100px;*/
-/*    color: #ecefee;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: space-between;*/
-/*    !*Justify space between but with max width 300px*!*/
-/*    max-width: 300px*/
-/*}*/
-
-/*.footer-left {*/
-/*    flex: 0.3;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    color: #ecefee;*/
-/*    width: 300px;*/
-/*}*/
-
-/*.footer-right {*/
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*    align-items: center;*/
-/*    flex: 0.3;*/
-/*    color: #ecefee;*/
-/*}*/
-
-/*.footer-albumLogo {*/
-/*    height: 60px;*/
-/*    width: 60px;*/
-/*    margin: 20px;*/
-/*    object-fit: contain;*/
-/*    border-radius: 15%;*/
-/*}*/
-
-/*.footer-songInfo > h4 {*/
-/*    margin-bottom: 5px;*/
-/*}*/
-
-/*.footer-songInfo > p {*/
-/*    font-size: 12px;*/
-/*}*/
 
 
 
