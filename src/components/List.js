@@ -45,4 +45,6 @@ export default function ToDoList() {
         </div>
     )
 
+    /* TODO: The checkbox dots are getting squishes */
+
 }

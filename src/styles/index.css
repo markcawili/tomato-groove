@@ -123,6 +123,7 @@ larger than 768px. This will make our design Mobile First:*/
 .listDiv {
     min-height: 25%;
 
+    position: relative;
 }
 
 .timerDiv {

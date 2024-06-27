@@ -32,6 +32,7 @@ input:checked+li {
     animation-timing-function: linear;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    color: rgba(42,35,31,0.6);
 }
 
 @keyframes strike{
@@ -47,8 +48,20 @@ input:checked+li {
     margin: 20px 0;
 }
 
+/*TODO: Items are not saved when user logs into Spotify*/
+
 .list-div {
     padding: 1.8rem;
+    color: #2a231f;
+
+    /*SCROLLABLE DIV PART*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    overflow-y: scroll;
 }
 
 input {
