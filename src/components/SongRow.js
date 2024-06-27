@@ -17,7 +17,6 @@ function SongRow({track, spotify}) {
 
     }
 
-    /*Maybe it is bugging because the position has not been clicked on yet??*/
     return (
         <div className='songRow' onClick={handlePlay}>
             <img className="songRow-album" src={track.album.images[0].url} alt='' />

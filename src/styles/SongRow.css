@@ -1,33 +1,37 @@
-/*.songRow {*/
-/*    padding: 15px;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    color: white;*/
-/*}*/
+.songRow {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
 
-/*.songRow:hover {*/
-/*    cursor: pointer;*/
-/*    background-color: #cd2200;*/
-/*    opacity: 0.8;*/
-/*    border-radius: 8px;*/
-/*}*/
+.songRow:hover {
+    cursor: pointer;
+    background-color: #cd2200;
+    opacity: 0.8;
+    border-radius: 8px;
+}
 
-/*.songRow-info {*/
-/*    margin-left: 20px;*/
-/*}*/
+.songRow:hover p {
+    color: #ecefee;
+}
 
-/*.songRow-info > p {*/
-/*    font-size: 14px;*/
-/*    margin-top: 3px;*/
-/*    color: gray;*/
-/*}*/
+.songRow-info {
+    margin-left: 20px;
+}
 
-/*.songRow-info > h2 {*/
-/*    font-size: 16px;*/
-/*}*/
+.songRow-info > p {
+    font-size: 14px;
+    margin-top: 3px;
+    color: gray;
+}
 
-/*.songRow-album {*/
-/*    height: 40px;*/
-/*    width: 40px;*/
-/*}*/
+.songRow-info > h2 {
+    font-size: 16px;
+}
+
+.songRow-album {
+    height: 40px;
+    width: 40px;
+}
 

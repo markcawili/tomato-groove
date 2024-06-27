@@ -5,16 +5,10 @@ import {loginUrl} from "../spotify";
 
 export default function Login() {
 
-/*    const logout = () => {
-        setToken("");
-        window.localStorage.removeItem("token");
-    }*/
-
     return (
         <div className="login">
 
-            <img src={logo} alt=""/>
-            <a href={loginUrl}>LOGIN WITH SPOTIFY</a>
+            <a href={loginUrl}> <img src={logo} alt=""/> LOGIN WITH SPOTIFY</a>
 
         </div>
     )

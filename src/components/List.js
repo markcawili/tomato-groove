@@ -31,15 +31,17 @@ export default function ToDoList() {
                     onChange={handleInputChange}
                 />
             </form>
-            <ul>
-                {/*Every To-Do is mapped as a list*/}
-                {todos.map((todo) => (
-                    <label className="list">
-                        <input type="checkbox"></input>
-                        <li className="strike" key={todo}>{todo}</li>
-                    </label>
-                ))}
-            </ul>
+            <div>
+                <ul>
+                    {/*Every To-Do is mapped as a list*/}
+                    {todos.map((todo) => (
+                        <label className="list">
+                            <input type="checkbox"></input>
+                            <li className="strike" key={todo}>{todo}</li>
+                        </label>
+                    ))}
+                </ul>
+            </div>
         </div>
     )
 
