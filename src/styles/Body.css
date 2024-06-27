@@ -1,25 +1,30 @@
-/*.utility-body {*/
-/*    background: linear-gradient(transparent, rgb(91, 87, 115), #2a231f);*/
-/*    padding: 30px;*/
-/*    color: #2a231f;*/
-/*    border-radius: 8px;*/
-/*    position: relative;*/
-/*    overflow: scroll;*/
-/*}*/
+.utility-body {
+    background: linear-gradient(rgb(91, 87, 115), #2a231f);
+    padding: 1.8rem;
+    border-radius: 8px;
 
-/*::-webkit-scrollbar {*/
-/*    display: none;*/
-/*}*/
+    /*SCROLLABLE DIV PART*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 
-/*.song {*/
-/*    !*position: absolute;*!*/
-/*    height: 100vh;*/
-/*}*/
+    overflow-y: scroll;
+}
 
-/*.song > :first-child {*/
-/*    margin-top: 10px;*/
-/*}*/
+.utility-body h1 {
+    color: #ecefee;
+}
 
-/*.body > h1 {*/
-/*    font-size: 35px;*/
-/*}*/
+::-webkit-scrollbar {
+    display: none;
+}
+
+.song > :first-child {
+    margin-top: 10px;
+}
+
+.utility-body > h1 {
+    font-size: 1.5rem;
+}
