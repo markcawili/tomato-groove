@@ -1,17 +1,17 @@
-.pomodoro {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 5em;
-	color: #2a231f;
+/*.pomodoro {*/
+/*	display: flex;*/
+/*	justify-content: center;*/
+/*	align-items: center;*/
+/*	font-size: 5em;*/
+/*	color: #2a231f;*/
 
-	/*border: solid 1px purple;*/
-}
+/*	!*border: solid 1px purple;*!*/
+/*}*/
 
-.timer:hover {
-    cursor: pointer;
-    background-color: rgba(205, 34, 0, 0.8);
-    border-radius: 8px;
-}
+/*.timer:hover {*/
+/*    cursor: pointer;*/
+/*    background-color: rgba(205, 34, 0, 0.8);*/
+/*    border-radius: 8px;*/
+/*}*/
 
 

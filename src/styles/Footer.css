@@ -1,11 +1,7 @@
-.footer-player {
-    padding: 15px;
-    background-color: #2a231f;
-}
-
 .footer {
-    position: relative;
+    position: absolute;
     bottom: 0;
+    width: 100%;
 }
 
 #root > div > div > div > div > div._ControlsRSWP.__11aa6ep > div._ControlsButtonsRSWP.__niud9e > div > button:hover,

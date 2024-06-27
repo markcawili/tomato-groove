@@ -53,12 +53,16 @@ table {
 	box-sizing: border-box;
 }
 
-html, .body, .App {
-	height: 100%
+html {
+    height: 100%
 }
 
-.body {
-	display: inline-block;
+body {
+    min-height: 100%;
+}
+
+.App {
+    height: 100dvh;
 }
 
 /*The columns inside a row are all floating to the left, and are therefore taken out of the flow of the page, and other
@@ -82,12 +86,12 @@ html {
 }
 
 h1 {
-	font-size: 3rem;
+	font-size: 2rem;
 	color: #2a231f;
 }
 
 .header {
-	padding: 15px;
+	padding: 0.5rem;
 }
 
 /*Design for mobile first!*/
