@@ -34,19 +34,19 @@
     justify-content: space-between;
 }
 
-.close {
+.close-player {
     right: 1.8rem;
     color: #ecefee;
 }
 
-.close:hover {
+.close-player:hover {
     color: #cd2200;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
     transform: scale(1.1) !important;
 }
 
-@keyframes slide-out {
+@keyframes slide-out-body {
     from {
         transform: translateX(0%);
     }
@@ -55,7 +55,7 @@
     }
 }
 
-.close-transition {
-    animation: slide-out 0.5s;
+.close-transition-body {
+    animation: slide-out-body 0.5s;
     animation-fill-mode: forwards;
 }
