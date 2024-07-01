@@ -38,7 +38,7 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';export
         <div className="list-div">
             <div className="list-div-header">
                 <div>
-                <h3>To Do List</h3>
+                    <h3>To Do List</h3>
                     <form onSubmit={handleSubmit}>
                         <input
                             placeholder="Enter Todo"
@@ -65,6 +65,5 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';export
         </div>
     )
 
-    /* TODO: The checkbox dots are getting squished */
 
 }

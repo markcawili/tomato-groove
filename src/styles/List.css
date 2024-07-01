@@ -1,6 +1,7 @@
 .list {
     display: flex;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .list > li {
@@ -8,8 +9,8 @@
 }
 
 [type=checkbox] {
-    width: 0.6rem;
-    height: 0.6rem;
+    min-width: 0.6rem;
+    min-height: 0.6rem;
     vertical-align: middle;
     -webkit-appearance: none;
     border: 0;
@@ -40,11 +41,11 @@ input:checked+li {
   100% { text-decoration-color : rgba(205, 34, 0, 1); }
 }
 
-.list-div > h3 {
+.list-div > .list-div-header > div > h3 {
     font-size: 1.5rem;
 }
 
-.list-div > form {
+.list-div > .list-div-header > div > form {
     margin: 20px 0;
 }
 
@@ -100,4 +101,8 @@ input {
 .close-transition-list {
     animation: slide-out-list 0.5s;
     animation-fill-mode: forwards;
+}
+
+.list-div {
+    margin: 0.2rem;
 }
