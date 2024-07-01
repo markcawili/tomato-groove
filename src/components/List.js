@@ -1,10 +1,15 @@
 import React from 'react';
 import {useState} from "react";
 import '../styles/List.css'
-import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';export default function ToDoList() {
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+
+export default function ToDoList() {
 
     const [todos, setTodos] = useState([]);
     const [inputVal, setInputVal] = useState('');
+    const [isListOpen, setIsListOpen] = React.useState(true);
 
     const handleInputChange = (e) => {
         setInputVal(e.target.value);
@@ -18,20 +23,26 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';export
         setInputVal('');
     };
 
-    function closeList() {
+    const closeList = () => {
+        setIsListOpen(false);
+
         let div = document.getElementsByClassName("list-div");
 
         div[0].classList.remove("open-transition-list");
         div[0].classList.add("close-transition-list");
-
-        /* TODO: need to add an open button on close */
     }
 
-    function open() {
+    const openList = () => {
+        setIsListOpen(true);
+
         let div = document.getElementsByClassName("list-div");
 
         div[0].classList.remove("close-transition-list");
         div[0].classList.add("open-transition-list");
+    }
+
+    function openSettings() {
+        console.log('test')
     }
 
     return (
@@ -49,21 +60,27 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';export
                         />
                     </form>
                 </div>
-                <KeyboardArrowLeftIcon className="close-list" fontSize="large" onClick={closeList} ></KeyboardArrowLeftIcon>
+
+                {isListOpen ?
+                    (<KeyboardArrowLeftIcon className="close-list" fontSize="large" onClick={closeList} ></KeyboardArrowLeftIcon>)
+                    :
+                    (<KeyboardArrowRightIcon className="open-list" fontSize="large" onClick={openList} ></KeyboardArrowRightIcon>)}
             </div>
             <div>
                 <ul>
                     {/*Every To-Do is mapped as a list*/}
                     {todos.map((todo) => (
-                        <label className="list">
-                            <input type="checkbox"></input>
-                            <li className="strike" key={todo}>{todo}</li>
+                        <label className="list-item">
+                            <div>
+                                <input type="checkbox"></input>
+                                <li className="strike" key={todo}>{todo}</li>
+                            </div>
+                            <MoreHorizIcon className="options" fontSize="small" onClick={openSettings}/>
                         </label>
                     ))}
                 </ul>
             </div>
         </div>
     )
-
 
 }

@@ -1,12 +1,38 @@
-.list {
+.list-item > div {
     display: flex;
+    cursor: pointer;
+
     align-items: center;
-    margin-bottom: 1rem;
+    justify-items: center;
 }
 
-.list > li {
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.6rem;
+
+    align-items: center;
+    justify-items: center;
+}
+
+.list-item:hover {
+    cursor: pointer;
+
+    .options {
+        visibility: visible;
+    }
+
+    .options:hover {
+        color: #cd2200;
+        transition: transform 0.2s ease-in-out;
+        transform: scale(1.1) !important;
+    }
+}
+
+.list-item > div > li {
     padding-left: 0.3rem;
 }
+
 
 [type=checkbox] {
     min-width: 0.6rem;
@@ -36,6 +62,10 @@ input:checked+li {
     color: rgba(42,35,31,0.6);
 }
 
+.checkbox:checked {
+    background-color: #cd2200;
+}
+
 @keyframes strike{
   0%   { text-decoration-color : rgba(205, 34, 0, 0); }
   100% { text-decoration-color : rgba(205, 34, 0, 1); }
@@ -49,6 +79,7 @@ input:checked+li {
     margin: 20px 0;
 }
 
+/* TODO: The settings button is also crossing out the list */
 /*TODO: Items are not saved when user logs into Spotify*/
 
 .list-div {
@@ -89,6 +120,18 @@ input {
     transform: scale(1.1) !important;
 }
 
+.list-div {
+    margin: 0.2rem;
+}
+
+.options {
+    margin-right: 0.5rem;
+    color: #2a231f;
+    visibility: visible;
+}
+
+/*Transitions*/
+
 @keyframes slide-out-list {
     from {
         transform: translateX(0%);
@@ -103,6 +146,16 @@ input {
     animation-fill-mode: forwards;
 }
 
-.list-div {
-    margin: 0.2rem;
+@keyframes slide-out-list-reverse {
+    from {
+        transform: translateX(-110%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.open-transition-list {
+    animation: slide-out-list-reverse 0.5s;
+    animation-fill-mode: forwards;
 }
