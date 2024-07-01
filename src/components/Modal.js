@@ -1,4 +1,5 @@
 import "../styles/Modal.css";
+import CloseIcon from '@mui/icons-material/Close';
 
 export default function Modal({isOpen, toggleModal, isBreak}) {
 
@@ -16,9 +17,8 @@ export default function Modal({isOpen, toggleModal, isBreak}) {
             <div className="modal">
                 <div className="overlay">
                     <div className="modal-content">
-                        <h2>TEST</h2>
+                        <CloseIcon className="close-modal-btn" onClick={toggleModal}/>
                         <p>{message}</p>
-                        <button className="close-modal-btn" onClick={toggleModal}>CLOSE</button>
                     </div>
                 </div>
             </div>
