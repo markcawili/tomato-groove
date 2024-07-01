@@ -35,7 +35,6 @@
 }
 
 .close {
-    position: fixed;
     right: 1.8rem;
     color: #ecefee;
 }
@@ -45,4 +44,18 @@
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
     transform: scale(1.1) !important;
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(+110%);
+    }
+}
+
+.close-transition {
+    animation: slide-out 0.5s;
+    animation-fill-mode: forwards;
 }

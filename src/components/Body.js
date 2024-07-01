@@ -6,13 +6,19 @@ function Body({spotify}) {
 
     const [{likedSongs}] = useDataLayerValue();
 
-    console.log(likedSongs);
+    // console.log(likedSongs);
+
+    function close() {
+        let div = document.getElementsByClassName("utility-body");
+
+        div[0].classList.add("close-transition");
+    }
 
     return (
         <div className="utility-body">
             <div className="utility-body-header">
                 <h1>Liked songs</h1>
-                <ArrowRightAltIcon className="close" fontSize="large"></ArrowRightAltIcon>
+                <ArrowRightAltIcon className="close" fontSize="large" onClick={close}></ArrowRightAltIcon>
             </div>
             <div className="song">
                 {likedSongs.items?.map((item) => (
