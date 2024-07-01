@@ -28,8 +28,6 @@ function Body({spotify}) {
         div[0].classList.add("open-transition-body");
     }
 
-    /*TODO: search up how to make divs that disappear and have button appear */
-
     return (
         <div className="utility-body">
             <div className="utility-body-header">

@@ -60,8 +60,7 @@
     }
 }
 
-.close-transition-body,
-.open-transition-body {
+.close-transition-body {
     animation: slide-out-body 0.5s;
     animation-fill-mode: forwards;
 }
