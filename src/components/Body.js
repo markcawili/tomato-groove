@@ -11,7 +11,17 @@ function Body({spotify}) {
     function close() {
         let div = document.getElementsByClassName("utility-body");
 
+        div[0].classList.remove("open-transition");
         div[0].classList.add("close-transition");
+
+        /* TODO: need to add an open button on close */
+    }
+
+    function open() {
+        let div = document.getElementsByClassName("utility-body");
+
+        div[0].classList.remove("close-transition");
+        div[0].classList.add("open-transition");
     }
 
     return (
