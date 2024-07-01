@@ -35,17 +35,21 @@
     justify-content: space-between;
 }
 
-.close-player {
+.close-player,
+.open-player {
     right: 1.8rem;
     color: #ecefee;
 }
 
-.close-player:hover {
+.close-player:hover,
+.open-player:hover {
     color: #cd2200;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
     transform: scale(1.1) !important;
 }
+
+/*Transitions*/
 
 @keyframes slide-out-body {
     from {
@@ -56,7 +60,22 @@
     }
 }
 
-.close-transition-body {
+.close-transition-body,
+.open-transition-body {
     animation: slide-out-body 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-out-body-reverse {
+    from {
+        transform: translateX(110%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.open-transition-body {
+    animation: slide-out-body-reverse 0.5s;
     animation-fill-mode: forwards;
 }
