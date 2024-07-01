@@ -28,3 +28,21 @@
 .utility-body > h1 {
     font-size: 1.5rem;
 }
+
+.utility-body-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.close {
+    position: fixed;
+    right: 1.8rem;
+    color: #ecefee;
+}
+
+.close:hover {
+    color: #cd2200;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.1) !important;
+}

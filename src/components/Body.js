@@ -1,7 +1,7 @@
 import '../styles/Body.css'
 import {useDataLayerValue} from "./DataLayer";
 import SongRow from "./SongRow";
-
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 function Body({spotify}) {
 
     const [{likedSongs}] = useDataLayerValue();
@@ -10,7 +10,10 @@ function Body({spotify}) {
 
     return (
         <div className="utility-body">
-            <h1>Liked songs</h1>
+            <div className="utility-body-header">
+                <h1>Liked songs</h1>
+                <ArrowRightAltIcon className="close" fontSize="large"></ArrowRightAltIcon>
+            </div>
             <div className="song">
                 {likedSongs.items?.map((item) => (
                     <SongRow spotify={spotify} track={item.track} />
