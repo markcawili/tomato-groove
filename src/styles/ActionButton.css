@@ -1,0 +1,12 @@
+.close-player:hover,
+.open-player:hover {
+    color: #cd2200;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.1) !important;
+}
+
+.close-player,
+.open-player {
+    color: #2a231f;
+}
