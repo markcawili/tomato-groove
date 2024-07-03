@@ -2,10 +2,12 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import {useState} from "react";
 import '../styles/ActionButton.css'
+import {useDataLayerValue} from "./DataLayer";
 
 function ActionButton({side}) {
 
     const [isComponentOpen, setIsComponentOpen] = useState(true);
+    const [{token}] = useDataLayerValue();
 
     const closeComponent = () => {
         setIsComponentOpen(false);
@@ -44,10 +46,12 @@ function ActionButton({side}) {
         <div>
             {side === 'right' ?
                 <div>
-                    {isComponentOpen ?
-                    (<KeyboardArrowRightIcon className="close-player" fontSize="large" onClick={closeComponent} />)
-                    :
-                    (<KeyboardArrowLeftIcon className="open-player" fontSize="large" onClick={openComponent} />)}
+                    {token ?
+                        (isComponentOpen ?
+                        (<KeyboardArrowRightIcon className="close-player" fontSize="large" onClick={closeComponent} />)
+                        :
+                        (<KeyboardArrowLeftIcon className="open-player" fontSize="large" onClick={openComponent} />))
+                        : null}
                 </div>
                 :
                 <div>
