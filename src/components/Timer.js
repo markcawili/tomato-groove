@@ -6,8 +6,8 @@ import '../styles/Timer.css'
 
 export default function Timer() {
 
-    const [minutes, setMinutes] = useState(0);
-    const [seconds, setSeconds] = useState(5);
+    const [minutes, setMinutes] = useState(25);
+    const [seconds, setSeconds] = useState(0);
     const [isActive, setIsActive] = React.useState(false);
     const [showModal, setShowModal] = React.useState(false);
     const [isBreak, setIsBreak] = React.useState(false);
@@ -28,8 +28,8 @@ export default function Timer() {
                         setSeconds(59);
                         setMinutes(minutes - 1);
                     } else {
-                        let minutes = isBreak ? 24 : 0;
-                        let seconds = 2;
+                        let minutes = isBreak ? 25 : 5;
+                        let seconds = 0;
 
                         setIsActive(false);
                         setMinutes(minutes);
