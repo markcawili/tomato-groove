@@ -47,6 +47,26 @@ label {
     }
 }
 
+.delete{
+    margin-right: 0.5rem;
+    color: #2a231f;
+    visibility: hidden;
+}
+
+/*When browser window is 1024px or smaller, just show the delete button*/
+@media only screen and (max-width: 1024px) {
+    .delete {
+        visibility: visible;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .list-div {
+        border-bottom: #2a231f solid 1px;
+        border-top: #2a231f solid 1px;
+    }
+}
+
 [type=checkbox] {
     min-width: 0.6rem;
     min-height: 0.6rem;
@@ -121,12 +141,6 @@ input {
 
 .list-div {
     margin: 0.2rem;
-}
-
-.delete{
-    margin-right: 0.5rem;
-    color: #2a231f;
-    visibility: hidden;
 }
 
 /*Transitions*/
