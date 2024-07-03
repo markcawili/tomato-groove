@@ -67,7 +67,7 @@ body {
     flex-direction: column;
 
     /*MAKE HIDDEN WHEN DONE*/
-    overflow: visible;
+    overflow: hidden;
 }
 
 .row {
@@ -105,8 +105,8 @@ h1 {
 .header {
 	padding: 0.5rem;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
 }
 
 /*Design for mobile first!*/
@@ -159,6 +159,5 @@ larger than 768px. This will make our design Mobile First:*/
 /* TODO: There is an awkward section of width just after 768px and then the bigger it gets the better it looks perhaps
     needs another media only screen to make it look better */
 
-/* TODO: Flexbox the list and liked songs headers and add the close buttons to the lateral sides of them so opposite
-     Maybe even move the To Do List header and input to the right side of the div so it is symmetrical to liked songs
-     then can put the left arrow close button on left side!*/
+/* TODO: Host it live and try it on mobile to check the double click issue for songs? */
+/* TODO: Figure out why it wont shuffle normally or just try showing the playlists instead */
