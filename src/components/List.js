@@ -2,8 +2,6 @@ import React, {useEffect} from 'react';
 import {useState} from "react";
 import '../styles/List.css'
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
-// import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
-// import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 export default function ToDoList() {
 
@@ -11,7 +9,6 @@ export default function ToDoList() {
     const [todos, setTodos] = useState([]);
 
     const [inputVal, setInputVal] = useState('');
-    const [isListOpen, setIsListOpen] = React.useState(true);
 
     /*Will always set the list of ToDos to current local storage*/
     useEffect(() => {
@@ -47,24 +44,6 @@ export default function ToDoList() {
         setTodos(updatedTodos);
         localStorage.setItem('todos', JSON.stringify(updatedTodos));
     }
-
-    // const closeList = () => {
-    //     setIsListOpen(false);
-    //
-    //     let div = document.getElementsByClassName("list-div");
-    //
-    //     div[0].classList.remove("open-transition-list");
-    //     div[0].classList.add("close-transition-list");
-    // }
-
-    // const openList = () => {
-    //     setIsListOpen(true);
-    //
-    //     let div = document.getElementsByClassName("list-div");
-    //
-    //     div[0].classList.remove("close-transition-list");
-    //     div[0].classList.add("open-transition-list");
-    // }
 
     function openSettings() {
         console.log('test')
