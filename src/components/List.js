@@ -70,13 +70,15 @@ export default function ToDoList() {
                 <ul>
                     {/*Every To-Do is mapped as a list*/}
                     {todos.map((todo) => (
-                        <label className="list-item">
+                        <div className="list-item" key={todo}>
                             <div>
-                                <input type="checkbox"></input>
-                                <li className="strike" key={todo}>{todo}</li>
+                                <input type="checkbox" />
+                                <label>
+                                    <li className="strike">{todo}</li>
+                                </label>
                             </div>
                             <MoreHorizIcon className="options" fontSize="small" onClick={openSettings}/>
-                        </label>
+                        </div>
                     ))}
                 </ul>
             </div>
