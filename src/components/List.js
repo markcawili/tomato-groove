@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {useState} from "react";
 import '../styles/List.css'
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import CancelIcon from '@mui/icons-material/Cancel';
 
 export default function ToDoList() {
 
@@ -45,10 +45,6 @@ export default function ToDoList() {
         localStorage.setItem('todos', JSON.stringify(updatedTodos));
     }
 
-    function openSettings() {
-        console.log('test')
-    }
-
     const handleDelete = (index) => {
         /*filter out current element, _ indicating it is not needed in the body, return true for all elements that are not
         * the current index being looked at*/
@@ -89,7 +85,7 @@ export default function ToDoList() {
                                     <li className="strike">{task.text}</li>
                                 </label>
                             </div>
-                            <MoreHorizIcon className="options" fontSize="small"
+                            <CancelIcon className="delete" fontSize="small"
                                            onClick={() => handleDelete(index)}/>
                         </div>
                     ))}
