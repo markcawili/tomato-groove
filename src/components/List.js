@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useState} from "react";
 import '../styles/List.css'
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
@@ -7,9 +7,17 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 export default function ToDoList() {
 
+    /*Will just be one key and nested list of to do items*/
     const [todos, setTodos] = useState([]);
+
     const [inputVal, setInputVal] = useState('');
     const [isListOpen, setIsListOpen] = React.useState(true);
+
+    /*Will always set the list of ToDos to current local storage*/
+    useEffect(() => {
+        const storedToDos = JSON.parse(localStorage.getItem('todos')) || [];
+        setTodos(storedToDos);
+    }, []);
 
     const handleInputChange = (e) => {
         setInputVal(e.target.value);
@@ -17,11 +25,28 @@ export default function ToDoList() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        /*Sets To Do List with what is currently in the list plus input value*/
-        setTodos((todo) => [...todo, inputVal]);
+
+        const newToDo = { text: inputVal, completed: false };
+
+        /*sets todos list with what is currently in the list plus new to do*/
+        const updatedTodos = [...todos, newToDo];
+
+        /*Updates the one key of to do items*/
+        setTodos(updatedTodos);
+        localStorage.setItem('todos', JSON.stringify(updatedTodos));
+
         /*Resets  the input value*/
         setInputVal('');
     };
+
+    const handleCheckboxChange = (index) => {
+        const updatedTodos = [...todos];
+
+        updatedTodos[index].completed = !updatedTodos[index].completed;
+
+        setTodos(updatedTodos);
+        localStorage.setItem('todos', JSON.stringify(updatedTodos));
+    }
 
     const closeList = () => {
         setIsListOpen(false);
@@ -43,6 +68,15 @@ export default function ToDoList() {
 
     function openSettings() {
         console.log('test')
+    }
+
+    const handleDelete = (index) => {
+        /*filter out current element, _ indicating it is not needed in the body, return true for all elements that are not
+        * the current index being looked at*/
+        const updatedTodos = todos.filter((_, i) => i !== index);
+
+        setTodos(updatedTodos);
+        localStorage.setItem('todos', JSON.stringify(updatedTodos));
     }
 
     return (
@@ -67,17 +101,22 @@ export default function ToDoList() {
                     (<KeyboardArrowRightIcon className="open-list" fontSize="large" onClick={openList} ></KeyboardArrowRightIcon>)}
             </div>
             <div>
-                <ul>
+                <ul id="tasks">
                     {/*Every To-Do is mapped as a list*/}
-                    {todos.map((todo) => (
-                        <div className="list-item" key={todo}>
+                    {todos.map((task, index) => (
+                        <div className="list-item" key={index}>
                             <div>
-                                <input type="checkbox" />
+                                <input
+                                    type="checkbox"
+                                    checked={task.completed}
+                                    onChange={() => handleCheckboxChange(index)}
+                                />
                                 <label>
-                                    <li className="strike">{todo}</li>
+                                    <li className="strike">{task.text}</li>
                                 </label>
                             </div>
-                            <MoreHorizIcon className="options" fontSize="small" onClick={openSettings}/>
+                            <MoreHorizIcon className="options" fontSize="small"
+                                           onClick={() => handleDelete(index)}/>
                         </div>
                     ))}
                 </ul>
