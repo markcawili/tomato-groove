@@ -8,6 +8,7 @@ import {useDataLayerValue} from "./components/DataLayer"
 import Footer from "./components/Footer";
 import {Helmet} from "react-helmet";
 import Body from "./components/Body";
+import ActionButton from "./components/ActionButton";
 
 //Will be master object for our interactions with our project and the API
 const spotify = new SpotifyWebApi();
@@ -16,6 +17,8 @@ function App() {
 
     //We can grab whatever we want from the data layer from here! What we want is destructured already, no object returned
     const [{token}, dispatch] = useDataLayerValue();
+    const left = "left";
+    const right = "right";
 
     useEffect(() => {
         const hash = getTokenFromUrl();
@@ -60,8 +63,9 @@ function App() {
             </Helmet>
 
             <div className="header">
+                <ActionButton side={left}/>
                 <h1>Tomato Groove</h1>
-                {/*<button>Dark mode</button>*/}
+                <ActionButton side={right}/>
             </div>
 
             <div className="row">
