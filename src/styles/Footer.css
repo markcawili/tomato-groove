@@ -7,7 +7,7 @@
 }
 
 /*Hides the hover on smaller sizes*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
     #root > div > div > div > div > div._ControlsRSWP.__11aa6ep > div._ControlsButtonsRSWP.__niud9e > div > button:hover,
     #root > div > div > div > div > div.rswp__active._InfoRSWP.__14lm7y9 > div > div > button:hover
     {

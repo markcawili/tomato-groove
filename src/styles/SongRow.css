@@ -5,13 +5,6 @@
     color: white;
 }
 
-.songRow:hover {
-    cursor: pointer;
-    background-color: #cd2200;
-    opacity: 0.8;
-    border-radius: 8px;
-}
-
 .songRow:hover p {
     color: #ecefee;
 }
@@ -35,3 +28,12 @@
     width: 40px;
 }
 
+/*Hides the hover on smaller sizes*/
+@media screen and (min-width: 1024px) {
+    .songRow:hover {
+        cursor: pointer;
+        background-color: #cd2200;
+        opacity: 0.8;
+        border-radius: 8px;
+    }
+}
