@@ -64,7 +64,7 @@ function App() {
             </Helmet>
 
             <div className="header">
-            <ActionButton side={left}/>
+                <ActionButton side={left}/>
                 <h1>Tomato Groove</h1>
                 <ActionButton side={right}/>
             </div>

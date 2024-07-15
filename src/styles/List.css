@@ -172,3 +172,18 @@ input {
     animation: slide-out-list-reverse 0.5s;
     animation-fill-mode: forwards;
 }
+
+/*Hides the components on smaller sizes*/
+@media only screen and (max-width: 600px) {
+  /* For tablets: */
+    .list-div {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For desktop: */
+    .list-div {
+        display: none;
+    }
+}

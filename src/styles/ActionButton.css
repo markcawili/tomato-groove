@@ -10,3 +10,18 @@
 .open-player {
     color: #2a231f;
 }
+
+/*Hides the components on smaller sizes*/
+@media only screen and (max-width: 600px) {
+  /* For tablets: */
+    .arrow-icon {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For desktop: */
+    .arrow-icon {
+        display: none;
+    }
+}

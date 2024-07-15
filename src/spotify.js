@@ -5,7 +5,8 @@
  */
 
 export const authEndpoint = "https://accounts.spotify.com/authorize";
-const redirectUri = "https://tomato-groove.web.app/";
+// const redirectUri = "https://tomato-groove.web.app/";
+const redirectUri = "http://localhost:3000/";
 const clientId = "4086684ccd334080b7243a8eba2b507c";
 const scopes = [
     "user-library-read",

@@ -78,3 +78,18 @@
     animation: slide-out-body-reverse 0.5s;
     animation-fill-mode: forwards;
 }
+
+/*Hides the components on smaller sizes*/
+@media only screen and (max-width: 600px) {
+  /* For tablets: */
+    .utility-body {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For desktop: */
+    .utility-body {
+        display: none;
+    }
+}

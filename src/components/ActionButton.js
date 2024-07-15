@@ -43,7 +43,7 @@ function ActionButton({side}) {
     }
 
     return (
-        <div>
+        <div className="arrow-icon">
             {side === 'right' ?
                 <div>
                     {token ?
