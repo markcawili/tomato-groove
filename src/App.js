@@ -60,10 +60,11 @@ function App() {
             <Helmet>
                 <meta charSet="utf-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <title>Tomato Groove</title>
+                <link rel="icon" type="image/png" href="/resources/favicon_package_v0.16/favicon.ico" sizes="16x16"/>
             </Helmet>
 
             <div className="header">
-                <ActionButton side={left}/>
+            <ActionButton side={left}/>
                 <h1>Tomato Groove</h1>
                 <ActionButton side={right}/>
             </div>
