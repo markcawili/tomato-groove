@@ -3,10 +3,12 @@
 	color: #2a231f;
 }
 
-.timer:hover {
-    cursor: pointer;
-    background-color: rgba(205, 34, 0, 0.8);
-    border-radius: 8px;
+/*Hides the hover on smaller sizes*/
+@media screen and (min-width: 768px) {
+    .timer:hover {
+        cursor: pointer;
+        background-color: rgba(205, 34, 0, 0.8);
+        border-radius: 8px;
+    }
 }
-
 

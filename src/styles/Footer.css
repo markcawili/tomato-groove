@@ -2,17 +2,18 @@
     width: 100%;
 }
 
-#root > div > div > div > div > div._ControlsRSWP.__11aa6ep > div._ControlsButtonsRSWP.__niud9e > div > button:hover,
-#root > div > div > div > div > div.rswp__active._InfoRSWP.__14lm7y9 > div > div > button:hover
-{
-    transition: transform 0.2s ease-in-out;
-    transform: scale(1.2) !important;
-    color: #cd2200;
-}
-
 #root > div > div.footerOne > div > div > div.rswp__active._InfoRSWP.__14lm7y9 > div > div > button {
     color: #cd2200;
 }
 
-
+/*Hides the hover on smaller sizes*/
+@media screen and (min-width: 768px) {
+    #root > div > div > div > div > div._ControlsRSWP.__11aa6ep > div._ControlsButtonsRSWP.__niud9e > div > button:hover,
+    #root > div > div > div > div > div.rswp__active._InfoRSWP.__14lm7y9 > div > div > button:hover
+    {
+        transition: transform 0.2s ease-in-out;
+        transform: scale(1.2) !important;
+        color: #cd2200;
+    }
+}
 
