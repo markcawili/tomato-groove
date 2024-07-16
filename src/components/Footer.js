@@ -5,13 +5,14 @@ import SpotifyPlayer from "react-spotify-web-playback"
 
 function Footer() {
 
-    const [{token, trackUri}] = useDataLayerValue();
+    const [{token, trackUri, playlistUri}] = useDataLayerValue();
     const [play, setPlay] = useState(false);
 
-    useEffect(() => setPlay(true), [trackUri]);
+    useEffect(() => setPlay(true), [playlistUri]);
 
-    /*CHECK THE URI*/
-    console.log(trackUri)
+    // /*CHECK THE URI*/
+    // console.log(trackUri)
+    // console.log(playlistUri)
 
     if (!token) return null;
 
@@ -22,7 +23,7 @@ function Footer() {
                 token={token}
                 showSaveIcon
                 // uris={trackUri}
-                uris={trackUri ? [trackUri] : []}
+                uris={playlistUri ? [playlistUri] : []}
                 play={play}
                 callback={state => {
                     if (!state.isPlaying) setPlay(false);

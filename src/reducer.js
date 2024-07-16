@@ -7,6 +7,7 @@ export const initialState = {
     item: null,
     likedSongs: [],
     trackUri: [],
+    playlistUri: [],
 };
 
 const reducer = (state, action) => {
@@ -47,6 +48,12 @@ const reducer = (state, action) => {
                 ...state,
                 playlists: action.playlists
             };
+
+        case 'SET_PLAYLIST_URI':
+            return {
+                ...state,
+                playlistUri: action.playlistUri
+            }
 
         default:
             return state;

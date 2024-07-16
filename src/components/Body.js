@@ -12,17 +12,19 @@ function Body({spotify}) {
     return (
         <div className="utility-body">
             <div className="utility-body-header">
-                <h1>Liked songs</h1>
+                <h1>Playlists</h1>
             </div>
+
+            {/*For Liked Songs*/}
             {/*<div className="song">*/}
             {/*    {likedSongs.items?.map((item) => (*/}
             {/*        <SongRow spotify={spotify} track={item.track} />*/}
             {/*    ))}*/}
             {/*</div>*/}
+
             <div className="song">
                 {playlists.items?.map((item) => (
-                    // FROM HERE YOU FIND OUT HOW TO DISPLAY THE ALBUM/PLAYLIST possibly just use uri?
-                    <SongRow spotify={spotify} track={item.track}/>
+                    <SongRow spotify={spotify} playlist={item}/>
                 ))}
             </div>
         </div>
