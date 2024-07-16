@@ -1,10 +1,21 @@
-# Getting Started with Create React App
+# Tomato Groove
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tomato Groove is a Pomodoro timer with Spotify Integration and a simple To-Do list application written with React, HTML, CSS, JavaScript. 
 
-## Available Scripts
+This project is an exercise of my learned React, HTML, CSS, JavaScript skills. The idea arose as I wanted a simple 
+Pomodoro timer to study with and integration with Spotify to see what song is playing. I wanted it to be as minimal as 
+possible and to include a to-do list for my current tasks. This application requires you to authenticate with Spotify
+to allow for access to your playlists. No personal data or usage information is kept by the application. 
 
-In the project directory, you can run:
+The timer runs for 25 minutes and includes 5-minute breaks. To start the timer, simply click on the countdown. To see 
+and play your playlists, click the `Log In` button to authenticate with Spotify and click on the desired playlist. 
+
+## Access
+
+You can access this application through https://tomato-groove.web.app/ or https://tomato-groove.firebaseapp.com/ as it
+is hosted on Google Firebase. 
+
+To access this project locally, fork this repository and run the following commands...
 
 ### `npm start`
 
@@ -13,11 +24,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -29,42 +35,10 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Known Issues
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+There may be bugs present when using smaller screen sizes "ie: on mobile devices". Currently, some extra ideas that I 
+may implement include a button to switch between 'Liked songs' and 'Playlists' and perhaps an initial popup modal to 
+show potential users any information about the application and how to use it. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
