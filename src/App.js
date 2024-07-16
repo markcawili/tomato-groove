@@ -16,7 +16,7 @@ const spotify = new SpotifyWebApi();
 function App() {
 
     //We can grab whatever we want from the data layer from here! What we want is destructured already, no object returned
-    const [{token}, dispatch] = useDataLayerValue();
+    const [{token, user}, dispatch] = useDataLayerValue();
     const left = "left";
     const right = "right";
 
@@ -49,6 +49,13 @@ function App() {
                 dispatch({
                     type: "SET_LIKED_SONGS",
                     likedSongs: response,
+                })
+            );
+
+            spotify.getUserPlaylists().then(response =>
+                dispatch({
+                    type: "SET_PLAYLISTS",
+                    playlists: response,
                 })
             );
 

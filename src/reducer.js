@@ -42,6 +42,12 @@ const reducer = (state, action) => {
                 trackUri: action.trackUri
             };
 
+        case 'SET_PLAYLISTS':
+            return {
+                ...state,
+                playlists: action.playlists
+            };
+
         default:
             return state;
     }

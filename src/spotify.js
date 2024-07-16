@@ -18,7 +18,9 @@ const scopes = [
     "streaming",
     "user-read-email",
     "user-read-private",
-    "user-library-modify"
+    "user-library-modify",
+    "playlist-read-private",
+    "playlist-read-collaborative"
 ];
 
 export const getTokenFromUrl = () => {
